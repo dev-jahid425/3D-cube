@@ -20,7 +20,7 @@ A simple and visually appealing **3D rotating cube animation** built using pure 
 
 ## 📸 Preview
 
-![Project Preview](Screenshot (6).png)
+![Project Preview](<preview/Screenshot%20(6).png>)
 
 ## 📂 Project Structure
 
