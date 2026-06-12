@@ -1,0 +1,82 @@
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Add perspective to parent container */
+.parents {
+  perspective: 1000px;
+  perspective-origin: top;
+}
+
+/* The cube itself */
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: spin 6s infinite linear;
+}
+
+/* Shared style for all faces */
+.cube .box {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #fff;
+  opacity: 0.9;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.5rem;
+
+  /*Center the text perfectly */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cube faces with colors and transforms */
+.front {
+  background: hsl(175, 100%, 70%);
+  transform: translateZ(100px);
+}
+
+.back {
+  background: hsl(205, 100%, 70%);
+  transform: rotateY(180deg) translateZ(100px);
+}
+
+.right {
+  background: hsl(145, 100%, 70%);
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+.left {
+  background: hsl(35, 100%, 70%);
+  transform: rotateY(-90deg) translateZ(100px);
+}
+
+.top {
+  background: hsl(275, 100%, 70%);
+  transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+  background: hsl(0, 100%, 70%);
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+/* Animation for rotation */
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
